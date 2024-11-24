@@ -1,4 +1,4 @@
-const palindromGroupBy = (arr, callback) => {
+const polifilGroupBy = (arr, callback) => {
     return arr.reduce((acc, item) => {
         const key = callback(item);
         acc[key] = acc[key] || [];
@@ -39,6 +39,6 @@ const toGroup = [
     {name: 'John'},
 ]
 
-console.log(palindromGroupBy(toGroup, item => item.name));
+console.log(polifilGroupBy(toGroup, item => item.name));
 console.log(palindrom(toGroup, item => item.name));
 console.log(pamindrom2(toGroup, 'surname'));
