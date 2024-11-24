@@ -1,0 +1,10 @@
+.container {
+    width: 300px;
+    display: flex;
+    background-color: blue;
+}
+.container__text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
