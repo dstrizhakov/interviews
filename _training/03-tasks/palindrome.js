@@ -1,4 +1,4 @@
-function palindrome1(str) {
+function palindrome(str) {
     return str.split('').reverse().join('') === str;
 }
 
@@ -13,10 +13,6 @@ const palindromeFast = (str) => {
     }
     return true;
 }
-
-// console.log(palindrome('dovod')) // true
-// console.log(palindrome('tower')) // false
-
 
 console.log(palindromeFast('dovod')) // true
 console.log(palindromeFast('tower')) // false

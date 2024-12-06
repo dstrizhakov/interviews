@@ -20,8 +20,6 @@ function retryFetch(url, { method = 'GET', headers }, attempts = 1) {
         })
         .catch(error => {
             const allowRetry = method !== 'PUT' && ![401, 403].includes(error.status);
-                console.log('RETRY:::::', error.status, allowRetry);
-
             if (allowRetry && attempts) {
                 return retryFetch(url, { method, headers }, attempts - 1)
             } else {

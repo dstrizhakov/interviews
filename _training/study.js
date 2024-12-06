@@ -10,10 +10,10 @@ console.log(add(2)(7));
 // ?СУММА ЭЛЕМЕНТОВ ЧЕРЕЗ ЗАМЫКАНИЕ
 const sum = (n) => (i) => typeof i === 'number' ? sum(n + i) : n
 
-console.log(sum(2)(7)(1)(5)());
+console.log(sum(2)(7)(1)(5)(8)());
 
 //?ПОЛУЧИТЬ РАСШИРЕНИЕ ФАИЛА ИЗ СТРОКИ
-const someFileName = 'snidfedfdfddexe'
+const someFileName = 'snidfedfdfddexe.exe'
 
 const getExtension = (filename) => {
 	if (typeof filename !== 'string') throw new Error('Invalid parameter type')

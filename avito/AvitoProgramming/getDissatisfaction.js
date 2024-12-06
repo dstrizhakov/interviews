@@ -17,6 +17,20 @@ buyerNeeds = [5, 6]
 res = 1 # первый покупатель покупает товар 5 и его неудовлетворённость = 0, второй также покупает товар 5 и его неудовлетворённость = 6-5 = 1
 */
 
+function getDissatisfactionSimple(goods, needs) {
+    let total = 0;
+    for (let need of needs) {
+        let best = Infinity;
+        for (let good of goods) {
+            best = Math.min(best, Math.abs(good - need))
+        }
+        total += best
+    }
+    return total
+}
+
+////
+
 function binSearch (goods, need) {
     let left = 0, right = goods.length - 1;
     while(left < right) {
